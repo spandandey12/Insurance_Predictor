@@ -1,3 +1,8 @@
+"""
+preprocessing.py
+----------------------------------------
+This model is used to calculate the individual risk factors used in the car insurance pricing system. The multipliers are used to estimate overall customer risk, which affects the final premium.
+"""
 # Real Age Multipliers
 Age_Multipliers = {
     18: 1.018341, 19: 1.016126, 20: 1.016307, 21: 1.017236, 22: 1.014096,
@@ -65,6 +70,9 @@ def accident_factor(num_accident):
 
 # Total combined risks
 def combined_factors(age, annual_km, car_age, year_driving, num_accident):
+"""
+Combining all individual risk multipliers into a single risk score. This will be used inside CarInsurance class.
+"""
     a = age_factor(age)
     mil = mileage_factor(annual_km)
     c = car_age_factor(car_age)
