@@ -7,10 +7,10 @@ class preprocess:
 
     def __init__(self,path):
         self.file_directory = path
-        self.data = pd.read_csv(self.file_directory)
     
     def train_test(self,split=0.8):
 
+        self.data = pd.read_csv(self.file_directory)
         self.X = self.data[["age", "sex", "bmi", "children", "smoker", "region"]]
         self.Y = self.data["charges"]
 
@@ -30,4 +30,3 @@ class preprocess:
         )
 
         return self.preprocessor
-    
