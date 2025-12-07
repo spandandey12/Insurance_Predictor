@@ -31,7 +31,7 @@ class TestCarInsurance(unittest.TestCase):
         
         self.assertIsInstance(premium, float)
         self.assertGreater(premium, 0)
-        self.assertGreaterEqual(premium, 400)  # realistic test
+        self.assertGreaterEqual(premium, 400)  
         self.assertLess(premium, 2000)
 
     def test_result_helper(self):

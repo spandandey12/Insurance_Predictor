@@ -1,14 +1,15 @@
 import unittest
 from test_car_insurance import TestCarInsurance
-
+from test_helper import TestHelper
 
 
 def suite():
-    suite = unittest.TestSuite()
+    test_suite = unittest.TestSuite()
     
-    suite.addTest(unittest.makeSuite(TestCarInsurance))
-    suite.addTest(unittest.makeSuite(TestHelper))
-
+    test_suite.addTest(unittest.makeSuite(TestCarInsurance))
+    test_suite.addTest(unittest.makeSuite(TestHelper))
+    
+    return test_suite
 
 
 if __name__ == "__main__":
