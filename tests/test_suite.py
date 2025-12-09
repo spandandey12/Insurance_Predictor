@@ -12,13 +12,13 @@ from tests.test_home_insurance2 import TestHomeData
 def suite():
     test_suite = unittest.TestSuite()
     
-    test_suite.addTest(unittest.makeSuite(TestCarInsurance))
-    test_suite.addTest(unittest.makeSuite(TestHelper))
+    test_suite.addTests(loader.loadTestsFromTestCase(TestCarInsurance))
+    test_suite.addTests(loader.loadTestsFromTestCase((TestHelper))
     
-    test_suite.addTest(health_suite())
+    test_suite.addTests(health_suite())
 	
-    test_suite.addTest(unittest.makeSuite(TestHomePredict))
-    test_suite.addTest(unittest.makeSuite(TestHomeData))
+    test_suite.addTests(loader.loadTestsFromTestCase((TestHomePredict))
+    test_suite.addTests(loader.loadTestsFromTestCase((TestHomeData))
 
     return test_suite
 
