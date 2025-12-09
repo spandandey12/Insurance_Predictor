@@ -13,13 +13,13 @@ def suite():
     loader = unittest.defaultTestLoader
     test_suite = unittest.TestSuite()
     
-    test_suite.addTests(loader.loadTestsFromTestCase((TestCarInsurance))
-    test_suite.addTests(loader.loadTestsFromTestCase((TestHelper))
+    test_suite.addTests(loader.loadTestsFromTestCase(TestCarInsurance))
+    test_suite.addTests(loader.loadTestsFromTestCase(TestHelper))
     
     test_suite.addTests(health_suite())
 	
-    test_suite.addTests(loader.loadTestsFromTestCase((TestHomePredict))
-    test_suite.addTests(loader.loadTestsFromTestCase((TestHomeData))
+    test_suite.addTests(loader.loadTestsFromTestCase(TestHomePredict))
+    test_suite.addTests(loader.loadTestsFromTestCase(TestHomeData))
 
     return test_suite
 
