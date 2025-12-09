@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-
+import numpy as np
 
 class TestHelper(unittest.TestCase):
 
@@ -22,7 +22,7 @@ class TestHelper(unittest.TestCase):
         self.assertEqual(len(self.df), 3)
         self.assertIn("a", self.df.columns)
         self.assertEqual(self.df["a"].sum(), 6)
-        self.assertIsInstance(self.df.iloc[0]["a"], int)
+        self.assertIsInstance(self.df.iloc[0]["a"], (int, np.integer))
 
     def test_math(self):
         x, y = 4, 5
